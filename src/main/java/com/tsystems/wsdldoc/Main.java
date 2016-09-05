@@ -27,11 +27,11 @@ public class Main {
     public static void main(String[] args) throws Exception {
         long start = System.currentTimeMillis();
 
-        args = new String[4];
-        String serviceName = "fulfillment";
-        args[0] = "-f=" + serviceName + ".html";
-        args[1] = "-d=gen";
-        args[2] = "-s=http://localhost:10002/ecompany/services/" + serviceName + "?wsdl";
+//        args = new String[4];
+//        String serviceName = "fulfillment";
+//        args[0] = "-f=" + serviceName + ".html";
+//        args[1] = "-d=gen";
+//        args[2] = "-s=http://localhost:10002/ecompany/services/" + serviceName + "?wsdl";
 //        args[2] = "-s=http://localhost:10002/tibet/services/" + serviceName + "?wsdl";
 //        args[2] = "-s=http://localhost:10002/tibet/b2b/services/" + serviceName + "?wsdl";
 //        args[2] = "-s=http://localhost:10002/ecompany/services/bulkExport?wsdl";
@@ -39,7 +39,7 @@ public class Main {
 //        args[4] = "-s=http://localhost:10002/ecompany/services/fulfillment?wsdl";
 //        args[5] = "-s=http://localhost:10002/ecompany/services/onlineRead?wsdl";
 //        args[6] = "-s=http://localhost:10002/ecompany/services/getTariffRights?wsdl";
-        args[3] = "-t=B2B";
+//        args[3] = "-t=B2B";
 
         // parse input parameters
         Options options = new Options();

@@ -13,7 +13,6 @@ import com.predic8.wsdl.Operation;
 import com.predic8.wsdl.Output;
 import com.predic8.wsdl.Part;
 import com.predic8.wsdl.WSDLParser;
-import freemarker.cache.FileTemplateLoader;
 import freemarker.template.Configuration;
 import freemarker.template.Template;
 import freemarker.template.TemplateExceptionHandler;
@@ -57,8 +56,9 @@ public class DocGenerator {
         cfg.setDefaultEncoding("UTF-8");
         cfg.setTemplateExceptionHandler(TemplateExceptionHandler.HTML_DEBUG_HANDLER);
         // loading templates
-        FileTemplateLoader ftl1 = new FileTemplateLoader(new File("C:\\dev\\workspace\\wsdldoc\\src\\main\\resources\\"));
-        cfg.setTemplateLoader(ftl1);
+        cfg.setClassForTemplateLoading(DocGenerator.class, "/");
+//        FileTemplateLoader ftl1 = new FileTemplateLoader(new File("C:\\dev\\workspace\\wsdldoc\\src\\main\\resources\\"));
+//        cfg.setTemplateLoader(ftl1);
 
         Map<String, Object> rootMap = new HashMap<>();
 
@@ -109,7 +109,7 @@ public class DocGenerator {
         rootMap.put("title", title);
 
         // process the template
-        Template template = cfg.getTemplate("wsdldoc.ftl");
+        Template template = cfg.getTemplate("com/tsystems/wsdldoc/wsdldoc.ftl");
 
 //        List<TypeData> collect = finalTypesMap.values().stream().filter(t -> t instanceof ComplexTypeData).filter(ct -> {
 //            return ((ComplexTypeData) ct).getSequence() != null && ((ComplexTypeData) ct).getSequence().size() != 0 && ((ComplexTypeData) ct).getSequence().contains(null);
