@@ -33,11 +33,11 @@ usage: wsdldoc
 
 On top of each documentation there is a title and service operations list.
 
-<img src="https://github.com/davidluckystar/wsdldoc/blob/master/screenshots/1.png" width="50%" style="display: inline-block">
+<img src="https://github.com/davidluckystar/wsdldoc/blob/master/screenshots/1.png" width="100%" style="display: inline-block">
 
 All found types are defined in separate blocks. Each type has a link.
 
-<img src="https://github.com/davidluckystar/wsdldoc/blob/master/screenshots/1.png" width="50%" style="display: inline-block">
+<img src="https://github.com/davidluckystar/wsdldoc/blob/master/screenshots/2.png" width="100%" style="display: inline-block">
 
 ## Roadmap
 * Add support for "choice" XSD tag
