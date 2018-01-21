@@ -46,8 +46,11 @@ public class TypesLocator {
         HashSet<String> alreadyCheckedSchemas = new HashSet<>();
         for (Message message : defs.getMessages()) {
             for (Part part : message.getParts()) {
-                Schema schema = part.getElement().getSchema();
-                fillMapRecursively(result, schema, alreadyCheckedSchemas, mapOfOriginalTypes, mapOfElements);
+                Element element = part.getElement();
+                if (element != null) {
+                    Schema schema = element.getSchema();
+                    fillMapRecursively(result, schema, alreadyCheckedSchemas, mapOfOriginalTypes, mapOfElements);
+                }
             }
         }
         return result;
@@ -89,8 +92,11 @@ public class TypesLocator {
         HashSet<String> alreadyCheckedSchemas = new HashSet<>();
         for (Message message : defs.getMessages()) {
             for (Part part : message.getParts()) {
-                Schema schema = part.getElement().getSchema();
-                fillOriginalMapRecursively(result, schema, alreadyCheckedSchemas);
+                Element element = part.getElement();
+                if (element != null) {
+                    Schema schema = element.getSchema();
+                    fillOriginalMapRecursively(result, schema, alreadyCheckedSchemas);
+                }
             }
         }
         return result;
@@ -131,8 +137,11 @@ public class TypesLocator {
         HashSet<String> alreadyCheckedSchemas = new HashSet<>();
         for (Message message : defs.getMessages()) {
             for (Part part : message.getParts()) {
-                Schema schema = part.getElement().getSchema();
-                fillMapOfElementsRecursively(result, schema, alreadyCheckedSchemas);
+                Element element = part.getElement();
+                if (element != null) {
+                    Schema schema = element.getSchema();
+                    fillMapOfElementsRecursively(result, schema, alreadyCheckedSchemas);
+                }
             }
         }
         return result;

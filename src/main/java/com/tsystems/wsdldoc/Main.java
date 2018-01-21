@@ -63,7 +63,7 @@ public class Main {
             } else {
                 Path dPath = Paths.get(cmd.getOptionValue("d"));
                 if (!Files.exists(dPath)) {
-                    Files.createDirectory(dPath);
+                    Files.createDirectories(dPath);
                 }
                 destination = dPath;
             }

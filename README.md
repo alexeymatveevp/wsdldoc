@@ -29,20 +29,28 @@ usage: wsdldoc
                           (WSDL by default)
 ```
 
+## Screenshots
+
+On top of each documentation there is a title and service operations list.
+
+<img src="https://github.com/davidluckystar/wsdldoc/blob/master/screenshots/1.png" width="50%" style="display: inline-block">
+
+All found types are defined in separate blocks. Each type has a link.
+
+<img src="https://github.com/davidluckystar/wsdldoc/blob/master/screenshots/1.png" width="50%" style="display: inline-block">
 
 ## Roadmap
 * Add support for "choice" XSD tag
 * Better support for extensions
 
-## Examples
-### eCompany
+## Usage examples
+
 
 java -jar wsdldoc-1.0-SNAPSHOT.jar -t=eCompany -s=http://tmv716.devlab.de.tmo:7501/ecompany/services/bulkExport?wsdl -s=http://tmv716.devlab.de.tmo:7501/ecompany/services/fulfillment?wsdl -s=http://tmv716.devlab.de.tmo:7501/ecompany/services/getContextData?wsdl -s=http://tmv716.devlab.de.tmo:7501/ecompany/services/onlineRead?wsdl -s=http://tmv716.devlab.de.tmo:7501/ecompany/services/getTariffRights?wsdl -d=~/wsdldoc
 
-### B2B
+
 java -jar wsdldoc-1.0-SNAPSHOT.jar -t=B2B -s=http://tmv716.devlab.de.tmo:7501/tibet/b2b/services/contract_vcs17_00?wsdl -s=http://tmv716.devlab.de.tmo:7501/tibet/b2b/services/customer_vcs17_00?wsdl -s=http://tmv716.devlab.de.tmo:7501/tibet/b2b/services/fulfillment_vcs17_00?wsdl -s=http://tmv716.devlab.de.tmo:7501/tibet/b2b/services/ordertracking_vcs17_00?wsdl -s=http://tmv716.devlab.de.tmo:7501/tibet/b2b/services/product_vcs17_00?wsdl -d=~/wsdldoc
 
-### eShop
+
 java -jar wsdldoc-1.0-SNAPSHOT.jar -t=eShop -s=http://tmv716.devlab.de.tmo:7501/tibet/services/eShopServices?wsdl -d=~/wsdldoc
 
-*P.S. the choice is still supported*
