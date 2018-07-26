@@ -9,7 +9,9 @@ Currently only loading from URL is supported (tested) for example
 
 The order of services in generated doc will be the same as the order of `-s` input parameters
 
-The tool can be assembled using `gradlew assemble` - it will be an executable jar under `build/libs`
+First you need to run `gradlew wrapper` to download wrapper libraries
+
+Then the tool can be assembled using `gradlew assemble` - it will be an executable jar under `build/libs`
 
 Try launching `java -jar wsdldoc-1.0-SNAPSHOT.jar` without parameters or with `-h` option and see the help screen
 
